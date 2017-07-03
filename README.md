@@ -8,8 +8,9 @@ Website to display a letter to a friend using Spark framework
 
 ## Technologies Used
 * Java
-* Spark
 * Gradle
+* Spark
+* Velocity Apache Engine
 
 ### License
 Copyright 2017 Anna Timofeeva  
