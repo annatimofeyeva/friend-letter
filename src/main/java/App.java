@@ -4,15 +4,17 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 public class App {
-  public static void main(String[] args){
+
+  public static void main(String[] args) {
     staticFileLocation("/public");
-    get("/", (request, responce) -> {
+
+    get("/", (request, response) -> {
       return new ModelAndView(new HashMap(), "templates/hello.vtl");
     }, new VelocityTemplateEngine());
 
+    get("/photos", (request, response) -> {
+      return new ModelAndView(new HashMap(), "templates/photos.vtl");
+    }, new VelocityTemplateEngine());
 
-     get("/favorite_photos", (request, response) -> {
-         return new ModelAndView(new HashMap(), "templates/favorite_photos.vtl");
-       }, new VelocityTemplateEngine());
   }
 }
